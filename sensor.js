@@ -19,4 +19,4 @@ function exit(err){
     process.exit();
 }
 
-process.on('SIGINT', exit);
+process.on('SIGINT', exit());
