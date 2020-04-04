@@ -7,7 +7,7 @@ var Gpio = onoff.Gpio,
 sensor.watch(function(err, value){
     if(err) exit(err);
     console.log(value ?'I got light!' :'I lost all light...');
-    led.writeSync(value ?1 :0);
+    led.write(value ?1 :0);
 });
 
 function exit(err){
