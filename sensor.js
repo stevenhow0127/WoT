@@ -12,9 +12,9 @@ sensor.watch(function(err, value){
 
 function exit(err){
     if (err) console.log('An error occurred: '+err);
-    sensor.export();
+    sensor.unexport();
     led.writeSync(0);
-    led.export();
+    led.unexport();
     console.log('Bye then...');
     process.exit();
 }
